@@ -7,16 +7,12 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="tab.css" />
 <link rel="stylesheet" href="switch.css" />
-<!--link rel="stylesheet" href="switch2.css" /-->
 
 
 <div class="tabs">
     <ul class="tab-links">
-        <li><a href="index.php">Camera</a></li>
         <li class="active"><a href="index_switch.php">Switch</a></li>
 	<li><a href="index_automate.php">Switch Automation</a></li>
-	<li><a href="index_rgb.php">RGB Light</a></li>
-	<li><a href="index_rgb_auto.php">RGB Light Automation</a></li>
     </ul>
 </div>
 
@@ -32,89 +28,7 @@
 
 <script type="text/javascript">
 
-var id_off = [0,1,2,3];
-var id_on = [4,5];
-var i_on=0;
-var i_off=0;
 var arg="id,value,description,enable";
-
-function myLoop(arr,num,value)
-{
-
-var ajax_update1;
-var val=value;
-
-if(window.XMLHttpRequest) ajax_update1= new XMLHttpRequest();
-else  ajax_update1= new ActiveXObject("Microsoft.XMLHTTP");
-
- setTimeout(function () {    
-     ajax_update1.open("GET","status_switch_update.php?val=" +val +"&id=" + arr[num] , false);
-     ajax_update1.send();
-      if (num < arr.length){           
-        num++;
-         myLoop(arr,num,val);             
-      }
-   }, 1000)
-
-return 0;
-}
-
-
-function good_night(){
-
-var ajaxDisplay = document.getElementById('ajaxDiv');
-
-//myLoop(id_off,0,0).then(myLoop(id_on,0,1));
-myLoop(id_off,0,0).then(setTimeout(myLoop(id_on,0,1),5000));
-
-setTimeout(reload_page,1000);
-}
-
-
-function good_night_off(){
-
-var ajaxDisplay = document.getElementById('ajaxDiv');
-var ajax_update2;
-
-if(window.XMLHttpRequest) ajax_update2= new XMLHttpRequest();
-else  ajax_update2= new ActiveXObject("Microsoft.XMLHTTP");
-
-setTimeout(function () {    
-      if (i_off < id_off.length){           
-        ajax_update2.open("GET","status_switch_update.php?val=0"+"&id=" + id_off[i_off] , true);
-        ajax_update2.send();
-        i_off++;
-         good_night_off(); 
-      }
-   }, 1000)
-
-
-
-setTimeout(reload_page,1000);
-}
-
-
-function good_night_on(){
-
-var ajaxDisplay = document.getElementById('ajaxDiv');
-var ajax_update3;
-
-if(window.XMLHttpRequest) ajax_update3= new XMLHttpRequest();
-else  ajax_update3= new ActiveXObject("Microsoft.XMLHTTP");
-
-
-setTimeout(function () {    
-      ajax_update3.open("GET","status_switch_update.php?val=1" +"&id=" + id_on[i_on] , true);
-      ajax_update3.send();
-      if (i_on < id_on.length){           
-        i_on++;
-         good_night_on(); 
-      }
-   }, 1000)
-
-
-setTimeout(reload_page,1000);
-}
 
 function onclick_btn(id) {
 
@@ -334,13 +248,6 @@ reload_page();
 <p>
 
 <div id='ajaxDiv'> </div>
-
-<div id='profileButton'  > 
-<input class="relative" style="display: none;" id="gdnt" type="button" onclick="good_night()" value="Good Night">
-<input class="relative" style="display: none;" id="gdnt_off" type="button" onclick="good_night_off()" value="Good Night-OFF">
-<input class="relative" style="display: none;" id="gdnt_on" type="button" onclick="good_night_on()" value="Good Night-ON">
-</div>
-
 
 
 </p>
