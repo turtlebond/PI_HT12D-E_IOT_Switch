@@ -1,0 +1,35 @@
+access_sql to access the database and set the pins after anytime -- (used for after reboot/power down)
+
+To dump sql databse:
+mysqldump -u mog -p my_db > my_db.sql
+
+to store sql databse:
+mysql -u root -p my_db <my_db.sql 
+
+to create user:
+create user mog@'localhost' identified by '123456';
+grant all privileges on my_db.* to mog@localhost identified by '123456';
+flush privileges;
+
+the cron is saved at: www-data
+
+to list:
+crontab -u www-data -l
+
+mysql
+
+create table:
+create table led_rgb(id int, description varchar(30), status int, address int, blink_option int, value int);
+
+add entry:
+insert into led_rgb values (1, "test", 0, 192.168.0.153, 1);
+
+modify table:
+alter table led_rgb drop column address;
+alter table led_rgb drop column value;
+
+alter table led_rgb add value varchar(40) after blink_option;
+alter table led_rgb add address varchar(15) after status;
+insert into led_rgb values (1, "test", 0, "192.168.0.153", 1, "e74040,aaa500,000000,720860,54dee8");
+
+
