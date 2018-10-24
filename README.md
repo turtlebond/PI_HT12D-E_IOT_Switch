@@ -17,7 +17,7 @@ Device: Raspberry Pi Model B, HT12D, HT12E, Jumper Wires, Relay
    - *mysql -u root -p my_db <my_db.sql*
 
 4. create user and grant privilege
-   - *mysql -u mog -p my_db*
+   - *mysql -u username -p my_db*
    - *create user username@'ip_address' identified by 'password';*
    - *grant all privileges on my_db.* to username@ip_address identified by 'password';*
    - *flush privileges;*
