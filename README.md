@@ -8,7 +8,7 @@ Device: Raspberry Pi Model B, HT12D, HT12E, Jumper Wires, Relay
 
 ## Instruction
 1. Install the required library
-   - apache2,apache2-utils,php5- for webpage
+   - apache2,apache2-utils,php5, mysql-server  
    - wiringpi - control Pi gpio pin (http://wiringpi.com/)
   
 2. Copy the files to /var/www/html/
