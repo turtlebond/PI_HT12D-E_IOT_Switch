@@ -22,9 +22,9 @@ Device: Raspberry Pi Model B, HT12D, HT12E, Jumper Wires, Relay
    - *grant all privileges on my_db.* to username@ip_address identified by 'password';*
    - *flush privileges;*
 
-5. Update the my_db.sql address with correct Pi pin address corrsponding to area id
+5. Update the my_db.sql address with correct Pi pin address corresponding to area id
 
-6. Update the *user* and *pwd* in *auto_switch.sh* and *access_sql.sh*
+6. Update the *user* and *pwd* in *auto_switch.sh* and *access_sql.sh* as created in #4
 
 7. Using browser,enter the IP address of the Pi hosting the webpage 
    <br />*make sure the Pi IP address is  included in router port forwarding if accessing the page from external network (not local network)
