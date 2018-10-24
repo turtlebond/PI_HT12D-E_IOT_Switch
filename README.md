@@ -22,7 +22,7 @@ Device: Raspberry Pi Model B, HT12D, HT12E, Jumper Wires, Relay
    - *grant all privileges on my_db.* to username@ip_address identified by 'password';*
    - *flush privileges;*
 
-5. Update the my_db.sql address with correct Pi pin address. 
+5. Update the my_db.sql address with correct Pi pin address corrsponding to area id
 
 ## Webpage View
 
