@@ -16,13 +16,22 @@ Device: Raspberry Pi Model B, HT12D, HT12E, Jumper Wires, Relay
 3. Store my_sql.db database to current machine
    - *mysql -u root -p my_db <my_db.sql*
 
-4. create user and grant privilege
+4. Create user and grant privilege
    - *mysql -u username -p my_db*
    - *create user username@'ip_address' identified by 'password';*
    - *grant all privileges on my_db.* to username@ip_address identified by 'password';*
    - *flush privileges;*
 
 5. Update the my_db.sql address with correct Pi pin address corrsponding to area id
+
+6. Update the *user* and *pwd* in *auto_switch.sh* and *access_sql.sh*
+
+7. Using browser,enter the IP address of the Pi hosting the webpage 
+   <br />*make sure the Pi IP address is  included in router port forwarding if accessing the page from external network (not local network)
+
+
+* For automation, cron is used. For viewing the cronlist
+   <br />*crontab -u www-data -l*
 
 ## Webpage View
 
