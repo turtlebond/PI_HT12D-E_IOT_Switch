@@ -27,8 +27,10 @@ Device: Raspberry Pi Model B, HT12D, HT12E, Jumper Wires, Relay
 ## Webpage View
 
 Switch:
+
 ![Alt text](./images/switch.png)
 
 Switch Automation:
+
 ![Alt text](./images/switch_auto.png)
 
