@@ -31,3 +31,4 @@ Switch:
 
 Switch Automation:
 ![Alt text](./images/switch_auto.png)
+
