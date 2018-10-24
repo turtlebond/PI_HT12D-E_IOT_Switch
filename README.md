@@ -28,6 +28,10 @@ Device: Raspberry Pi Model B, HT12D, HT12E, Jumper Wires, Relay
 
 7. Using browser,enter the IP address of the Pi hosting the webpage 
    <br />*make sure the Pi IP address is  included in router port forwarding if accessing the page from external network (not local network)
+   
+ 8. Incase no electricity and want to reinitalize the switch after power up
+    <br /> either add *reboot access_sql.sh* in crontab OR
+    <br /> add *access_sql.sh* in /etc/rc.local
 
 
 * For automation, cron is used. For viewing the cronlist
