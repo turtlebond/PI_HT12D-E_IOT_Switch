@@ -4,17 +4,20 @@
 This project is developed so that a switch can be controlled from webpage, thus making it easier to control from any part of the world. 
 Rapberry Pi with Raspbian OS is used as the gateway for user to control switch. User can turn on/off a device using the webpage hosted by Pi. The webpage uses sql database for displaying info related to a switch.
 <br /> 
-<br /> In order to eliminate the use of long wires to reach targetted device from the Pi for on/off, Holtek HT12D and HT12E is used. HT12E with XY-MK5V and HT12D with XY-FST acts as a remote control to transmit and receive RF signal (refer HT12D/HT12E documentation). HT12D with specific address is connected with targetted device (Refer Schematic for wiring). HT12E which is wired to the Pi, send the received signal from the webpage to the targetted device using the address. The info about the targetted device address is stored in the sql database. 
-For controlling the targetted device for automation based on time, cronjob is utilised. 
+<br /> In order to eliminate the use of long wires to reach targetted device from the Pi for on/off, Holtek HT12D and HT12E is used. HT12E with XY-MK5V and HT12D with XD-FST acts as a remote control to transmit and receive RF signal (refer HT12D/HT12E documentation). HT12D with specific address is connected with targetted device at particular data output. Each address can drive 4 data output (Refer Wiring section). HT12E which is wired to the Pi, send the received signal from the webpage to the targetted device using the address. The info about the targetted device , its corresponding address and data line is stored in the sql database. For controlling the targetted device for automation based on time, cronjob is utilised.
+<br /> 
+<br />The HT12E and HT12D are supplied with 5V voltage. Targetted frequncy(fEnc) HT12E is 3KHz. Hence, 1MOhm resistor is used based on the HT12E datasheet. As for HT12D, targetted frequency is 50*fEnC=150KHz, thus 51KOhm resisor is used. 
 
-Parts: Raspberry Pi Model B, HT12D, HT12E, Jumper Wires, 
-Relay for AC, Electronic solenoid for water
+ 
 
+Parts: Raspberry Pi Model B, HT12D, HT12E,  XY-MK5V, XD-FST
 
 ## Wiring
 #### HT12D
+![Alt text](./images/ht12d.png)
 
-#### HT12E and Raspberry Pi
+#### HT12E
+![Alt text](./images/ht12e.png)
 
 ## Instruction
 1. Install the required library
