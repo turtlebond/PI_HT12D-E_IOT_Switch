@@ -4,7 +4,7 @@
 This project is developed so that a switch can be controlled from webpage, thus making it easier to control from any part of the world. 
 Rapberry Pi with Raspbian OS is used as the gateway for user to control switch. User can turn on/off a device using the webpage hosted by Pi. The webpage uses sql database for displaying info related to a switch.
 <br /> 
-<br /> In order to eliminate the use of long wires to reach targetted device from the Pi for on/off, Holtek HT12D and HT12E is used. Holtek HT12E and HT12D acts as a remote control to send and receive signal (refer HT12D/HT12E documentation). HT12D with specific address is connected with targetted device (Refer Schematic for wiring). HT12E which is wired to the Pi, send the received signal from the webpage to the targetted device using the address. The info about the targetted device address is stored in the sql database. 
+<br /> In order to eliminate the use of long wires to reach targetted device from the Pi for on/off, Holtek HT12D and HT12E is used. HT12E with XY-MK5V and HT12D with XY-FST acts as a remote control to transmit and receive RF signal (refer HT12D/HT12E documentation). HT12D with specific address is connected with targetted device (Refer Schematic for wiring). HT12E which is wired to the Pi, send the received signal from the webpage to the targetted device using the address. The info about the targetted device address is stored in the sql database. 
 For controlling the targetted device for automation based on time, cronjob is utilised. 
 
 Parts: Raspberry Pi Model B, HT12D, HT12E, Jumper Wires, 
@@ -21,7 +21,7 @@ Relay for AC, Electronic solenoid for water
    - apache2,apache2-utils,php5, mysql-server  
    - wiringpi - control Pi gpio pin (http://wiringpi.com/)
   
-2. Copy the files to /var/www/html/
+2. Copy the files from web to /var/www/html/
   
 3. Store my_sql.db database to current machine
    - *mysql -u root -p my_db <my_db.sql*
