@@ -35,14 +35,14 @@ Raspberry Pi Model B, HT12D, HT12E,  XY-MK5V, XD-FST
 | ------------- | ------------- |
 | R1  | 1M Ohm  |
 | JP3  | XY-MK-5V  |
-| JP2-1  | Pi - P0  |
-| JP2-2  | Pi- P1 |
-| JP2-3  | Pi - P2  |
-| JP2-4  | Pi - P3  |
-| JP5-2  | Pi - P4  |
-| JP5-4  | Pi- P5  |
-| JP5-6  | Pi - P6  |
-| JP1  | Pi - P7  |
+| JP2-1  | Pi - GPIO0 (H:11) |
+| JP2-2  | Pi - GPIO1 (H:12)|
+| JP2-3  | Pi - GPIO2 (H:13) |
+| JP2-4  | Pi - GPIO3  (H:15) |
+| JP5-2  | Pi - GPIO4  (H:16)|
+| JP5-4  | Pi- GPIO5  (H:18) |
+| JP5-6  | Pi - GPIO6 (H:22) |
+| JP1  | Pi - GPIO7  (H:7) |
 
 ## Instruction
 1. Install the required library
