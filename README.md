@@ -4,14 +4,14 @@
 This project is developed so that a switch can be controlled from webpage, thus making it easier to control from any part of the world. 
 Rapberry Pi with Raspbian OS is used as the gateway for user to control switch. User can turn on/off a device using the webpage hosted by Pi. The webpage uses sql database for displaying info related to a switch.
 <br /> 
-<br /> In order to eliminate the use of long wires to reach targetted device from the Pi for on/off, Holtek HT12D and HT12E is used. HT12E with XY-MK5V and HT12D with XD-FST acts as a remote control to transmit and receive RF signal (refer HT12D/HT12E documentation). HT12D with specific address is connected with targetted device at particular data output. Each address can drive 4 data output (Refer Wiring section). HT12E which is wired to the Pi, send the received signal from the webpage to the targetted device using the address. The info about the targetted device , its corresponding address and data line is stored in the sql database. For controlling the targetted device for automation based on time, cronjob is utilised.
+<br /> In order to eliminate the use of long wires to reach target device from the Pi for on/off, Holtek HT12D and HT12E is used. HT12E with XY-MK-5V and HT12D with XD-FST acts as a remote control to transmit and receive RF signal (refer HT12D/HT12E documentation). HT12D with a defined address is connected with target device at a data output. Each address can drive up to 4 data output (Refer Wiring section). HT12E which is wired to the Pi, encode RF signal with the values from the webpage (ex:address and data) and transmit via XY-MK-5V. The info about the target device, address and data line is stored in the sql database. The XD-FST receive the transmitted signal and decode using HT12D and if the address matches will drive the data output. For controlling the target device for automation, cronjob is utilised.
 <br /> 
 <br />The HT12E and HT12D are supplied with 5V voltage. Targetted frequency(fEnc) for HT12E is 3KHz. Hence, 1MOhm resistor is used based on the HT12E datasheet. As for HT12D, targetted frequency is 50*fEnC=150KHz, thus 51KOhm resistor is used. 
 
  
 ## Wiring
 #### Parts
-Raspberry Pi Model B, HT12D, HT12E,  XY-MK5V, XD-FST
+Raspberry Pi Model B, HT12D, HT12E,  XY-MK-5V, XD-FST
 
 #### HT12D ( Freq=150KHz )
 
@@ -23,10 +23,10 @@ Raspberry Pi Model B, HT12D, HT12E,  XY-MK5V, XD-FST
 | R5  | 33K Ohm  |
 | R2  | 51K Ohm  |
 | JP6  | XD-FST  |
-| JP7-1  | Targetted device ex: Relay, electric solenoid .etc |
-| JP7-2  | Targetted device  |
-| JP7-3  | Targetted device  |
-| JP7-4  | Targetted device  |
+| JP7-1  | Target device ex: Relay, electric solenoid .etc |
+| JP7-2  | Target device  |
+| JP7-3  | Target device  |
+| JP7-4  | Target device  |
 
 #### HT12E ( Freq=3KHz )
 ![Alt text](./images/ht12e.png)
