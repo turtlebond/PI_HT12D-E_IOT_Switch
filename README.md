@@ -9,15 +9,31 @@ Rapberry Pi with Raspbian OS is used as the gateway for user to control switch. 
 <br />The HT12E and HT12D are supplied with 5V voltage. Targetted frequncy(fEnc) HT12E is 3KHz. Hence, 1MOhm resistor is used based on the HT12E datasheet. As for HT12D, targetted frequency is 50*fEnC=150KHz, thus 51KOhm resisor is used. 
 
  
-
-Parts: Raspberry Pi Model B, HT12D, HT12E,  XY-MK5V, XD-FST
-
 ## Wiring
-#### HT12D
+#### Parts
+Raspberry Pi Model B, HT12D, HT12E,  XY-MK5V, XD-FST
+
+#### HT12D ( Freq=150KHz )
+
 ![Alt text](./images/ht12d.png)
 
-#### HT12E
+
+|  Label | Value/Connection |
+| ------------- | ------------- |
+| R5  | 33K Ohm  |
+| R2  | 51K Ohm  |
+| JP6  | XD-FST  |
+
+#### HT12E ( Freq=3KHz )
 ![Alt text](./images/ht12e.png)
+
+|  Label | Value |
+| ------------- | ------------- |
+| R1  | 1M Ohm  |
+| JP3  | XY-MK-5V  |
+| JP5-0  | Pi - P5  |
+| JP5-1  | Pi- P6  |
+| JP5-2  | Pi - P7  |
 
 ## Instruction
 1. Install the required library
