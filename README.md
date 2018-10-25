@@ -6,7 +6,7 @@ Rapberry Pi with Raspbian OS is used as the gateway for user to control switch. 
 <br /> 
 <br /> In order to eliminate the use of long wires to reach targetted device from the Pi for on/off, Holtek HT12D and HT12E is used. HT12E with XY-MK5V and HT12D with XD-FST acts as a remote control to transmit and receive RF signal (refer HT12D/HT12E documentation). HT12D with specific address is connected with targetted device at particular data output. Each address can drive 4 data output (Refer Wiring section). HT12E which is wired to the Pi, send the received signal from the webpage to the targetted device using the address. The info about the targetted device , its corresponding address and data line is stored in the sql database. For controlling the targetted device for automation based on time, cronjob is utilised.
 <br /> 
-<br />The HT12E and HT12D are supplied with 5V voltage. Targetted frequncy(fEnc) HT12E is 3KHz. Hence, 1MOhm resistor is used based on the HT12E datasheet. As for HT12D, targetted frequency is 50*fEnC=150KHz, thus 51KOhm resisor is used. 
+<br />The HT12E and HT12D are supplied with 5V voltage. Targetted frequency(fEnc) for HT12E is 3KHz. Hence, 1MOhm resistor is used based on the HT12E datasheet. As for HT12D, targetted frequency is 50*fEnC=150KHz, thus 51KOhm resistor is used. 
 
  
 ## Wiring
