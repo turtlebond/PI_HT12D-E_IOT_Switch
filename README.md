@@ -27,13 +27,18 @@ Raspberry Pi Model B, HT12D, HT12E,  XY-MK5V, XD-FST
 #### HT12E ( Freq=3KHz )
 ![Alt text](./images/ht12e.png)
 
-|  Label | Value |
+|  Label | Value/Connection |
 | ------------- | ------------- |
 | R1  | 1M Ohm  |
 | JP3  | XY-MK-5V  |
-| JP5-0  | Pi - P5  |
-| JP5-1  | Pi- P6  |
-| JP5-2  | Pi - P7  |
+| JP2-1  | Pi - P0  |
+| JP2-2  | Pi- P1 |
+| JP2-3  | Pi - P2  |
+| JP2-4  | Pi - P3  |
+| JP5-2  | Pi - P4  |
+| JP5-4  | Pi- P5  |
+| JP5-6  | Pi - P6  |
+| JP1  | Pi - P7  |
 
 ## Instruction
 1. Install the required library
