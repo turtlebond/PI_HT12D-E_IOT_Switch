@@ -1,10 +1,20 @@
 # PI_HT12D-E_IOT_Switch
-Control relay through webpage by using Raspberry Pi and HT12D and HT12E
 
-Device: Raspberry Pi Model B, HT12D, HT12E, Jumper Wires, Relay
+## Intro
+This project is developed so that a switch can be controlled from webpage, thus making it easier to control from any part of the world. 
+Rapberry Pi with Raspbian OS is used as the gateway for user to control switch. User can turn on/off a device using the webpage hosted by Pi. The webpage uses sql database for displaying info related to a switch.
+<br /> 
+<br /> In order to eliminate the use of long wires to reach targetted device from the Pi for on/off, Holtek HT12D and HT12E is used. Holtek HT12E and HT12D acts as a remote control to send and receive signal (refer HT12D/HT12E documentation). HT12D with specific address is connected with targetted device (Refer Schematic for wiring). HT12E which is wired to the Pi, send the received signal from the webpage to the targetted device using the address. The info about the targetted device address is stored in the sql database. 
+For controlling the targetted device for automation based on time, cronjob is utilised. 
+
+Parts: Raspberry Pi Model B, HT12D, HT12E, Jumper Wires, 
+Relay for AC, Electronic solenoid for water
 
 
 ## Wiring
+#### HT12D
+
+#### HT12E and Raspberry Pi
 
 ## Instruction
 1. Install the required library
