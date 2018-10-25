@@ -23,6 +23,10 @@ Raspberry Pi Model B, HT12D, HT12E,  XY-MK5V, XD-FST
 | R5  | 33K Ohm  |
 | R2  | 51K Ohm  |
 | JP6  | XD-FST  |
+| JP7-1  | Targetted device ex: Relay, electric solenoid .etc |
+| JP7-2  | Targetted device  |
+| JP7-3  | Targetted device  |
+| JP7-4  | Targetted device  |
 
 #### HT12E ( Freq=3KHz )
 ![Alt text](./images/ht12e.png)
