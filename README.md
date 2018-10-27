@@ -1,8 +1,8 @@
 # PI_HT12D-E_IOT_Switch
 
 ## Intro
-This project is developed so that a switch can be controlled from webpage, thus making it easier to control from any part of the world. 
-Rapberry Pi with Raspbian OS is used as the gateway for user to control switch. User can turn on/off a device using the webpage hosted by Pi. The webpage uses sql database for displaying info related to a switch.
+This project is developed so that a device can be powered up/down using webpage, thus making it easier to control from any part of the world. 
+Rapberry Pi with Raspbian OS is used as the gateway for user to control a device. User can turn on/off a device using the webpage hosted by Pi. The webpage uses sql database for displaying info related to a switch.
 <br /> 
 <br /> HT12E with XY-MK-5V and HT12D with XD-FST used as a remote control to transmit and receive RF signal (refer HT12D/HT12E documentation). HT12D with a defined address is connected to target device at one of data output. Each address can drive up to 4 data output (Refer Wiring section). HT12E which is wired to the Pi, encode RF signal with the values from the webpage (ex:address and data) and transmit via XY-MK-5V. The info about the target device, address and data line is stored in the sql database. The XD-FST receive the transmitted signal and decode using HT12D and if the address matches will drive the data output. For controlling the target device for automation, cronjob is utilised.
 <br /> 
